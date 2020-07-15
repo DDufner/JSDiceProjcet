@@ -1,0 +1,97 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dice Pun, Dice Fun</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script1.js"></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <!--<div class="pixelart-to-css"></div>-->
+        <img id="diceVikingImage" src="JSDiceVikingImage2.png">
+        <div class="header">
+            <h1>Dice Pun, Dice Fun!</h1>
+        </div>
+        <!--end of header div-->
+
+        <div class="item1" id="diceForm">
+            <h3>Roll 6 Sided Die</h3>
+            <p id="sixSidedDieResult">[_]</p>
+            <button onclick="rollSixSideDie()">Roll</button>
+        </div>
+        <!--end of dice/item2 div-->
+        <div class="item2" id="menuForm">Menu
+            <div>Option A</div>
+            <div>Option B</div>
+        </div>
+        <div class="item3">
+            <div class="item3" id="diceListForm">
+                <h3>Roll Listy Die</h3>
+                <div id="" style="overflow:auto; height:100px;">
+                    <p id="sixSidedDieWithList">[_]</p>
+                </div>
+                <button onclick="rollSixSideDieWithList()">Roll</button>
+            </div>
+
+            <!--<div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
+                <label>Number of Dice Sides<input type="number" name="customDiceSides"/></label>
+            </div>-->
+        </div>
+        <div class="item4">
+            <div class="item4" id="diceForm">
+                <h3>Roll ? Sided Die</h3>
+                <label>Number of Dice Sides<input type="number" name="customDiceSides"/></label>
+                <p id="customSidedDieResult">[_]</p>
+                <button onclick="rollCustomSideDie()">Roll</button>
+            </div>
+        </div>
+        <div class="item5"></div>
+    </div>
+    <!--end of grid-container-->
+
+
+
+
+
+
+
+
+
+    <!--
+    <div id="missionTarget"></div>
+    Fetch some planetary data
+
+    <div id="launchForm" style="align-self: center;">
+        <form>
+            <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
+                <label>Pilot Name <input type="text" name="pilotName" id="pilotName"/></label>
+            </div>
+            <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
+                <label>Co-pilot Name <input type="text" name="copilotName"/></label>
+            </div>
+            <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
+                <label>Fuel Level (L) <input type="number" name="fuelLevel"/></label>
+            </div>
+            <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
+                <label>Cargo Mass (kg) <input type="number" name="cargoMass"/></label>
+            </div>
+            <button type='button' id="formSubmit">Submit</button>
+        </form>
+    </div>
+    <div id="launchStatusCheck">
+        <h2 id="launchStatus">Awaiting Information Before Launch</h2>
+        <div id="faultyItems">
+            <ol>
+                <li id="pilotStatus">Pilot Ready</li>
+                <li id="copilotStatus">Co-pilot Ready</li>
+                <li id="fuelStatus">Fuel level high enough for launch</li>
+                <li id="cargoStatus">Cargo mass low enough for launch</li>
+            </ol>
+        </div>
+    </div>-->
+</body>
+
+</html>
