@@ -1,30 +1,45 @@
 function rollSixSideDie() {
-    var result = Math.floor(Math.random() * (7 - 1) + 1);
+    var result = Math.floor(Math.random() * 6 + 1);
     document.getElementById("sixSidedDieResult").innerHTML = result;
 }
 
 let resultArray = [];
 
 function rollSixSideDieWithList() {
-    var resultArrayItem = resultArray.push(Math.floor(Math.random() * (7 - 1) + 1));
+    var resultArrayItem = resultArray.unshift(Math.floor(Math.random() * 6 + 1));
     let resultArrayList = "";
-    console.log("random(?) number generated")
     resultArray.forEach(function(resultArrayItem) {
         resultArrayList += "<p>" + resultArrayItem + "</p>";
-        console.log("item added to list");
     });
     document.getElementById("sixSidedDieWithList").innerHTML = resultArrayList;
+    numberSetCompletion(resultArrayList);
 }
 
 //not started 
-function rollCustomSideDie(customDiceSides) {
-    //var customDiceSidesNumber = parseInt(customDiceSides);
-    //let customDiceSides = document.querySelector("input[name=customDiceSides]").value;
-    var result = Math.floor(Math.random() * ((customDiceSides + 1) - 1) + 1);
+function rollCustomSideDie() {
+    let customDieSides = document.querySelector("input[name=customDieSides]").value;
+    var result = Math.floor(Math.random() * customDieSides + 1);
     document.getElementById("customSidedDieResult").innerHTML = result;
 }
 
+function numberSetCompletion(numberArray) {
+    //let setCompleted = false;
+    if (numberArray.includes(1, 2, 3, 4, 5, 6) && setCompleted == false) {
+        //setCompleted = true;
+        confirm("You've Rolled A Set! +5!")
+    }
+}
+
+function addToSix(customDiceSides) {
+    var result = 6 + customDiceSides;
+    document.getElementById("customSidedDieResult").innerHTML = result;
+}
 /*
+function resetArray(resultArray) {
+    let resultArray = "";
+    document.document.getElementById("sixSidedDieWithList").innerHTML = resultArray;
+}
+
 document.getElementById("sixSidedDieButton").onclick = function() {
     rollSixSideDice();
 }

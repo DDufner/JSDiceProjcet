@@ -11,39 +11,39 @@
 <body>
     <div class="grid-container">
         <!--<div class="pixelart-to-css"></div>-->
-        <img id="diceVikingImage" src="JSDiceVikingImage2.png">
+        <img class="diceVikingImage" src="JSDiceVikingImage2.png">
         <div class="header">
             <h1>Dice Pun, Dice Fun!</h1>
         </div>
-        <!--end of header div-->
-
-        <div class="item1" id="diceForm">
-            <h3>Roll 6 Sided Die</h3>
-            <p id="sixSidedDieResult">[_]</p>
-            <button onclick="rollSixSideDie()">Roll</button>
-        </div>
-        <!--end of dice/item2 div-->
         <div class="item2" id="menuForm">Menu
             <div>Option A</div>
             <div>Option B</div>
         </div>
-        <div class="item3">
-            <div class="item3" id="diceListForm">
-                <h3>Roll Listy Die</h3>
-                <div id="" style="overflow:auto; height:100px;">
-                    <p id="sixSidedDieWithList">[_]</p>
-                </div>
-                <button onclick="rollSixSideDieWithList()">Roll</button>
-            </div>
 
-            <!--<div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
-                <label>Number of Dice Sides<input type="number" name="customDiceSides"/></label>
+        <div class="diceListForm">
+            <h3>Roll Listy Die</h3>
+            <p>Lists Results From Newest To Oldest</p>
+            <div class="resultsList" style="overflow:auto; height:100px;">
+                <p id="sixSidedDieWithList"></p>
+            </div>
+            <div class="buttonDiv">
+                <button class="buttonStyle" onclick="rollSixSideDieWithList()">Roll</button>
+            </div>
+            <!--<div class="buttonDiv">
+                <button class="buttonStyle" onclick="resetArray()">Reset</button>
             </div>-->
         </div>
-        <div class="item4">
+
+        <div class="SixSideDiceForm">
+            <h3>Roll 6 Sided Die</h3>
+            <p id="sixSidedDieResult">[_]</p>
+            <button onclick="rollSixSideDie()">Roll</button>
+        </div>
+
+        <div class="customSideDieForm">
             <div class="item4" id="diceForm">
                 <h3>Roll ? Sided Die</h3>
-                <label>Number of Dice Sides<input type="number" name="customDiceSides"/></label>
+                <label>Number of Dice Sides<input type="number" name="customDieSides"/></label>
                 <p id="customSidedDieResult">[_]</p>
                 <button onclick="rollCustomSideDie()">Roll</button>
             </div>
