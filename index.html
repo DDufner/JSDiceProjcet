@@ -29,9 +29,9 @@
             <div class="buttonDiv">
                 <button class="buttonStyle" onclick="rollSixSideDieWithList()">Roll</button>
             </div>
-            <!--<div class="buttonDiv">
+            <div class="buttonDiv">
                 <button class="buttonStyle" onclick="resetArray()">Reset</button>
-            </div>-->
+            </div>
         </div>
 
         <div class="SixSideDiceForm">
@@ -42,23 +42,17 @@
 
         <div class="customSideDieForm">
             <div class="item4" id="diceForm">
-                <h3>Roll ? Sided Die</h3>
-                <label>Number of Dice Sides<input type="number" name="customDieSides"/></label>
-                <p id="customSidedDieResult">[_]</p>
-                <button onclick="rollCustomSideDie()">Roll</button>
+                <form name="customSideDieForm" method="post">
+                    <h3>Roll ? Sided Die</h3>
+                    <label>Number of Dice Sides<input type="number" id="customDieSides" required/></label>
+                    <p id="customSidedDieResult">[_]</p>
+                    <button type="button" onclick="rollCustomSideDie()">Roll</button>
+                </form>
             </div>
         </div>
         <div class="item5"></div>
     </div>
     <!--end of grid-container-->
-
-
-
-
-
-
-
-
 
     <!--
     <div id="missionTarget"></div>

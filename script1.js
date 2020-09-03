@@ -15,13 +15,29 @@ function rollSixSideDieWithList() {
     numberSetCompletion(resultArrayList);
 }
 
-//not started 
+function resetArray() {
+    let arrayLength = resultArray.length;
+    for (let i = 0; i < arrayLength; i++) {
+        resultArray.unshift();
+        return resultArray;
+    }
+    document.getElementById("sixSidedDieWithList").innerHTML = resultArray;
+}
+
 function rollCustomSideDie() {
-    let customDieSides = document.querySelector("input[name=customDieSides]").value;
+    let customDieSides = document.querySelector("input[id=customDieSides]").value;
     var result = Math.floor(Math.random() * customDieSides + 1);
     document.getElementById("customSidedDieResult").innerHTML = result;
 }
-
+/*
+function positiveNumberValidation() {
+    var numberFieldInput = document.getElementById("customDieSides").value;
+    if (document.getElementById("customDieSides").value < 1) {
+        inputWarningMessage = "Invalid Number. Please enter a number greated than 0";
+    }
+    document.getElementById("inputWarningMessage").innerHTML = inputWarningMessage;
+}
+*/
 function numberSetCompletion(numberArray) {
     //let setCompleted = false;
     if (numberArray.includes(1, 2, 3, 4, 5, 6) && setCompleted == false) {
@@ -30,14 +46,10 @@ function numberSetCompletion(numberArray) {
     }
 }
 
+/*
 function addToSix(customDiceSides) {
     var result = 6 + customDiceSides;
     document.getElementById("customSidedDieResult").innerHTML = result;
-}
-/*
-function resetArray(resultArray) {
-    let resultArray = "";
-    document.document.getElementById("sixSidedDieWithList").innerHTML = resultArray;
 }
 
 document.getElementById("sixSidedDieButton").onclick = function() {
@@ -47,17 +59,13 @@ document.getElementById("sixSidedDieButton").onclick = function() {
 document.getElementById("submit").onclick = function() {
     rollDice()
 };
-
+*/
 function rollDice() {
     var result = Math.floor((Math.random() * 6) + 1);
     document.getElementById("output").innerHTML = result;
 }
 
-function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello World";
-}
-
-
+/*
 function randomizeDestination() {
     fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
         response.json().then(function(json) {
